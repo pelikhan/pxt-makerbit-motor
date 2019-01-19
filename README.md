@@ -36,10 +36,10 @@ makerbit.stopMotor(Motor.A)
 
 ### MakerBit setMotorDirection
 
-Sets the direction of a motor. Use this function at start time to configure your motors without the need to rewire.
+Sets the rotation direction of a motor. Use this function at start time to configure your motors without the need to rewire.
 
 ```sig
-makerbit.setMotorDirection(Motor.A, MotorDirection.Reverse)
+makerbit.setMotorRotation(Motor.A, MotorDirection.CounterClockwise)
 ```
 
 ## License
