@@ -1,0 +1,19 @@
+{
+    "name": "MakerBit-Motor",
+    "version": "0.0.1",
+    "description": "Motor controller for MakerBit",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "namespace.ts",
+        "README.md",
+        "motor.ts",
+        "_locales/de/MakerBit-Motor-strings.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true
+}

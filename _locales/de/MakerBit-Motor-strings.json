@@ -1,0 +1,13 @@
+{
+  "Motor.All|block": "A + B",
+  "Motor.A|block": "A",
+  "Motor.B|block": "B",
+  "MotorDirection.Forward|block": "vorwärts",
+  "MotorDirection.Reverse|block": "rückwärts",
+  "makerbit.runMotor|block": "schalte Motor %motor | auf Leistung %speed",
+  "makerbit.setMotorDirection|block": "stelle Motor %motor Richtung | auf %direction",
+  "makerbit.stopMotor|block": "stoppe Motor %motor",
+  "makerbit|block": "MakerBit",
+  "{id:category}Makerbit": "Makerbit",
+  "{id:subcategory}Motors": "Motoren"
+}
