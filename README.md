@@ -1,4 +1,4 @@
-# MakerBit Touch
+# MakerBit Motor
 
 [![Build Status](https://travis-ci.org/1010Technologies/pxt-makerbit-motor.svg?branch=master)](https://travis-ci.org/1010Technologies/pxt-makerbit-motor)
 
