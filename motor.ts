@@ -7,16 +7,16 @@ const enum Motor {
   All = 2
 }
 
-const enum MotorDirection {
-  //% block="forward"
-  Forward = 1,
-  //% block="reverse"
-  Reverse = -1
+const enum MotorRotation {
+  //% block="clockwise"
+  Clockwise = 1,
+  //% block="counter-clockwise"
+  CounterClockwise = -1
 }
 
 // MakerBit motor driver blocks
 namespace makerbit {
-  const motorDirections = [MotorDirection.Forward, MotorDirection.Forward];
+  const motorRotations = [MotorRotation.Clockwise, MotorRotation.Clockwise];
 
   /**
    * Sets the speed of a motor.
@@ -37,16 +37,16 @@ namespace makerbit {
     const analogSpeed = pins.map(absSpeedPercentage, 0, 100, 0, 1023);
 
     if (motor === Motor.A || motor === Motor.All) {
-      const isForward = speed * motorDirections[Motor.A] > 0;
-      pins.digitalWritePin(DigitalPin.P11, isForward ? 1 : 0);
-      pins.digitalWritePin(DigitalPin.P12, isForward ? 0 : 1);
+      const isClockwise = speed * motorRotations[Motor.A] > 0;
+      pins.digitalWritePin(DigitalPin.P11, isClockwise ? 1 : 0);
+      pins.digitalWritePin(DigitalPin.P12, isClockwise ? 0 : 1);
       pins.analogWritePin(AnalogPin.P13, analogSpeed);
     }
 
     if (motor === Motor.B || motor === Motor.All) {
-      const isForward = speed * motorDirections[Motor.B] > 0;
-      pins.digitalWritePin(DigitalPin.P15, isForward ? 1 : 0);
-      pins.digitalWritePin(DigitalPin.P16, isForward ? 0 : 1);
+      const isClockwise = speed * motorRotations[Motor.B] > 0;
+      pins.digitalWritePin(DigitalPin.P15, isClockwise ? 1 : 0);
+      pins.digitalWritePin(DigitalPin.P16, isClockwise ? 0 : 1);
       pins.analogWritePin(AnalogPin.P14, analogSpeed);
     }
   }
@@ -75,18 +75,18 @@ namespace makerbit {
   /**
    * Sets the direction of a motor.
    * @param motor motor, eg: Motor.A
-   * @param direction direction of the motor, eg: MotorDirection.Forward
+   * @param rotation rotation of the motor, eg: MotorDirection.Clockwise
    */
   //% subcategory=Motors
-  //% blockId=makerbit_motor_set_direction block="set motor %motor direction | to %direction"
+  //% blockId=makerbit_motor_set_direction block="set motor %motor rotation | to %rotation"
   //% weight=88
-  export function setMotorDirection(motor: Motor, direction: MotorDirection) {
+  export function setMotorRotation(motor: Motor, rotation: MotorRotation) {
     if (motor === Motor.A || motor === Motor.All) {
-      motorDirections[Motor.A] = direction;
+      motorRotations[Motor.A] = rotation;
     }
 
     if (motor === Motor.B || motor === Motor.All) {
-      motorDirections[Motor.B] = direction;
+      motorRotations[Motor.B] = rotation;
     }
   }
 }
