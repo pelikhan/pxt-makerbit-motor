@@ -8,15 +8,15 @@ const enum Motor {
 }
 
 const enum MotorRotation {
-  //% block="clockwise"
-  Clockwise = 1,
-  //% block="counter-clockwise"
-  CounterClockwise = -1
+  //% block="forward"
+  Forward = 1,
+  //% block="backward"
+  Backward = -1
 }
 
 // MakerBit motor driver blocks
 namespace makerbit {
-  const motorRotations = [MotorRotation.Clockwise, MotorRotation.Clockwise];
+  const motorRotations = [MotorRotation.Forward, MotorRotation.Forward];
 
   /**
    * Sets the speed of a motor.
@@ -78,7 +78,7 @@ namespace makerbit {
    * @param rotation rotation of the motor, eg: MotorDirection.Clockwise
    */
   //% subcategory=Motors
-  //% blockId=makerbit_motor_set_direction block="set motor %motor rotation | to %rotation"
+  //% blockId=makerbit_motor_set_rotation block="set motor %motor rotation | to %rotation"
   //% weight=88
   export function setMotorRotation(motor: Motor, rotation: MotorRotation) {
     if (motor === Motor.A || motor === Motor.All) {
