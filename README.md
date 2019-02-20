@@ -23,7 +23,7 @@ The MakerBit board provides a motor controller that can control two bi-direction
 Sets the speed of a motor in the range of -100 to 100.
 
 ```sig
-makerbit.runMotor(Motor.A, 80)
+makerbit.runMotor(MakerBitMotor.A, 80)
 ```
 
 ### MakerBit stopMotor
@@ -31,7 +31,7 @@ makerbit.runMotor(Motor.A, 80)
 Stops a motor.
 
 ```sig
-makerbit.stopMotor(Motor.A)
+makerbit.stopMotor(MakerBitMotor.A)
 ```
 
 ### MakerBit setMotorDirection
@@ -39,7 +39,7 @@ makerbit.stopMotor(Motor.A)
 Sets the rotation direction of a motor. Use this function at start time to configure your motors without the need to rewire.
 
 ```sig
-makerbit.setMotorRotation(Motor.A, MotorDirection.Backward)
+makerbit.setMotorRotation(MakerBitMotor.A, MakerBitMotorDirection.Backward)
 ```
 
 ## License
@@ -49,4 +49,3 @@ Licensed under the MIT License (MIT). See LICENSE file for more details.
 ## Supported targets
 
 - for PXT/microbit
-- for PXT/calliope
