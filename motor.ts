@@ -16,7 +16,10 @@ const enum MakerBitMotorRotation {
 
 // MakerBit motor driver blocks
 namespace makerbit {
-  const motorRotations = [MakerBitMotorRotation.Forward, MakerBitMotorRotation.Forward];
+  const motorRotations = [
+    MakerBitMotorRotation.Forward,
+    MakerBitMotorRotation.Forward
+  ];
 
   /**
    * Sets the speed of a motor.
@@ -24,8 +27,8 @@ namespace makerbit {
    * @param speed percentage in the range of -100 to 100, eg: 80
    */
   //% subcategory=Motors
-  //% blockId="makerbit_motor_run" block="run motor %motor | at speed %speed"
-  //% speed.min=-100 speed.max=100
+  //% blockId="makerbit_motor_run" block="run motor %motor | at %speed \\%"
+  //% speed.shadow="speedPicker"
   //% weight=90
   export function runMotor(motor: MakerBitMotor, speed: number): void {
     if (speed === 0) {
@@ -80,7 +83,10 @@ namespace makerbit {
   //% subcategory=Motors
   //% blockId=makerbit_motor_set_rotation block="set motor %motor rotation | to %rotation"
   //% weight=88
-  export function setMotorRotation(motor: MakerBitMotor, rotation: MakerBitMotorRotation) {
+  export function setMotorRotation(
+    motor: MakerBitMotor,
+    rotation: MakerBitMotorRotation
+  ) {
     if (motor === MakerBitMotor.A || motor === MakerBitMotor.All) {
       motorRotations[MakerBitMotor.A] = rotation;
     }

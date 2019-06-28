@@ -4,7 +4,7 @@
   "Motor.B|block": "B",
   "MotorRotation.Forward|block": "vorwärts",
   "MotorRotation.Backward|block": "rückwärts",
-  "makerbit.runMotor|block": "schalte Motor %motor | auf Leistung %speed",
+  "makerbit.runMotor|block": "schalte Motor %motor | auf %speed \\%",
   "makerbit.setMotorRotation|block": "setze Motor %motor Rotation | auf %rotation",
   "makerbit.stopMotor|block": "stoppe Motor %motor",
   "makerbit|block": "MakerBit",
