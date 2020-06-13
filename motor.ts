@@ -30,6 +30,7 @@ namespace makerbit {
   //% blockId="makerbit_motor_run" block="run motor %motor | at %speed \\%"
   //% speed.min=-100
   //% speed.max=100
+  //% speed.shadow=turnRatioPicker
   //% weight=90
   export function runMotor(motor: MakerBitMotor, speed: number): void {
     if (speed === 0) {
