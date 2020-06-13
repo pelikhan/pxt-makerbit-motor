@@ -4,33 +4,32 @@ const enum MakerBitMotor {
   //% block="B"
   B = 1,
   //% block="A + B"
-  All = 2
+  All = 2,
 }
 
 const enum MakerBitMotorRotation {
   //% block="forward"
   Forward = 1,
   //% block="backward"
-  Backward = -1
+  Backward = -1,
 }
 
 // MakerBit motor driver blocks
 namespace makerbit {
   const motorRotations = [
     MakerBitMotorRotation.Forward,
-    MakerBitMotorRotation.Forward
+    MakerBitMotorRotation.Forward,
   ];
 
   /**
    * Sets the speed of a motor.
-   * @param motor motor, eg: Motor.A
+   * @param motor motor, eg: MakerBitMotor.A
    * @param speed percentage in the range of -100 to 100, eg: 80
    */
   //% subcategory=Motors
-  //% blockId="makerbit_motor_run" block="run motor %motor | at %speed \\%"
+  //% blockId="makerbit_motor_run" block="run motor %motor | at speed %speed \\%"
   //% speed.min=-100
   //% speed.max=100
-  //% speed.shadow=turnRatioPicker
   //% weight=90
   export function runMotor(motor: MakerBitMotor, speed: number): void {
     if (speed === 0) {
@@ -58,7 +57,7 @@ namespace makerbit {
 
   /**
    * Stops a motor.
-   * @param motor motor, eg: Motor.A
+   * @param motor motor, eg: MakerBitMotor.A
    */
   //% subcategory=Motors
   //% blockId="makerbit_motor_stop" block="stop motor %motor"
@@ -79,8 +78,8 @@ namespace makerbit {
 
   /**
    * Sets the rotation direction of a motor. Use this function at start time to configure your motors without the need to rewire.
-   * @param motor motor, eg: Motor.A
-   * @param rotation rotation of the motor, eg: MotorDirection.Clockwise
+   * @param motor motor, eg: MakerBitMotor.A
+   * @param rotation rotation of the motor, eg: MakerBitMotorRotation.Forward
    */
   //% subcategory=Motors
   //% blockId=makerbit_motor_set_rotation block="set motor %motor rotation | to %rotation"
