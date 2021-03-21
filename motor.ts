@@ -44,14 +44,24 @@ namespace makerbit {
       const isClockwise = speed * motorRotations[MakerBitMotor.A] > 0;
       pins.digitalWritePin(DigitalPin.P11, isClockwise ? 1 : 0);
       pins.digitalWritePin(DigitalPin.P12, isClockwise ? 0 : 1);
-      pins.analogWritePin(AnalogPin.P13, analogSpeed);
+      if (speed === 100) {
+        // Avoid PWM whenever possible as only 3 concurrent PWM outputs are available on the microbit
+        pins.digitalWritePin(DigitalPin.P13, 1);
+      } else {
+        pins.analogWritePin(AnalogPin.P13, analogSpeed);
+      }
     }
 
     if (motor === MakerBitMotor.B || motor === MakerBitMotor.All) {
       const isClockwise = speed * motorRotations[MakerBitMotor.B] > 0;
       pins.digitalWritePin(DigitalPin.P15, isClockwise ? 1 : 0);
       pins.digitalWritePin(DigitalPin.P16, isClockwise ? 0 : 1);
-      pins.analogWritePin(AnalogPin.P14, analogSpeed);
+      if (speed === 100) {
+        // Avoid PWM whenever possible as only 3 concurrent PWM outputs are available on the microbit
+        pins.digitalWritePin(DigitalPin.P14, 1);
+      } else {
+        pins.analogWritePin(AnalogPin.P14, analogSpeed);
+      }
     }
   }
 
