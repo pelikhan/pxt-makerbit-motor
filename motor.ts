@@ -1,3 +1,5 @@
+// MakerBit motor driver blocks
+
 const enum MakerBitMotor {
   //% block="A"
   A = 0,
@@ -14,7 +16,8 @@ const enum MakerBitMotorRotation {
   Backward = -1,
 }
 
-// MakerBit motor driver blocks
+//% color=#0fbc11 icon="\u272a" block="MakerBit"
+//% category="MakerBit"
 namespace makerbit {
   const motorRotations = [
     MakerBitMotorRotation.Forward,
