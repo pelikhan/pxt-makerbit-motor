@@ -1,6 +1,6 @@
 {
     "name": "MakerBit-Motor",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "description": "Motor controller for MakerBit",
     "license": "MIT",
     "dependencies": {
