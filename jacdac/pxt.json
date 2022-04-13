@@ -1,5 +1,6 @@
 {
     "name": "makerbit-motor-jacdac",
+    "version": "1.0.10",
     "dependencies": {
         "core": "*",
         "radio": "*",
