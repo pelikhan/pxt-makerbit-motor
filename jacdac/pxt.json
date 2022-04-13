@@ -6,8 +6,8 @@
         "radio": "*",
         "microphone": "*",
         "pxt-makerbit-motor": "github:pelikhan/pxt-makerbit-motor",
-        "jacdac": "github:microsoft/pxt-jacdac#v0.9.4",
-        "jacdac-motor": "github:microsoft/pxt-jacdac/motor#v0.9.4"
+        "jacdac": "github:microsoft/pxt-jacdac#v0.9.5",
+        "jacdac-motor": "github:microsoft/pxt-jacdac/motor#v0.9.5"
     },
     "files": [
         "main.ts",
@@ -17,7 +17,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "4.1.18",
+        "target": "4.1.20",
         "targetId": "microbit"
     },
     "supportedTargets": [
