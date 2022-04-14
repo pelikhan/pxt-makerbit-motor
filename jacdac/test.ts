@@ -13,6 +13,6 @@ forever(() => {
     } else if (speed < -100) {
         dv = 5
     }
-    led.plotBarGraph(Math.abs(speed), 100)
+    //led.plotBarGraph(Math.abs(speed), 100)
     pause(250)    
 })
