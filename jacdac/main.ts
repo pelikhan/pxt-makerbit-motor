@@ -6,12 +6,12 @@ namespace modules {
      * Maker:bit motor 1
      */
     //% fixedInstance whenUsed block="makerbit motor A"
-    export const makerbitMotorA = new MotorClient("makerbit motor A?device=self")
+    export const makerbitMotorA = new MotorClient("makerbit motor A?dev=self&srvo=0")
     /**
      * Maker:bit motor 2
      */
     //% fixedInstance whenUsed block="makerbit motor B"
-    export const makerbitMotorB = new MotorClient("makerbit motor B?device=self")
+    export const makerbitMotorB = new MotorClient("makerbit motor B?dev=self&srvo=1")
 }
 
 namespace servers {
@@ -47,8 +47,8 @@ namespace servers {
             this.enabled = this.handleRegBool(pkt,
                 jacdac.MotorReg.Enabled, this.enabled)
             this.duty = this.handleRegValue(pkt,
-                jacdac.MotorReg.Duty,
-                jacdac.MotorRegPack.Duty,
+                jacdac.MotorReg.Speed,
+                jacdac.MotorRegPack.Speed,
                 oldDuty)
 
             this.syncDuty()
