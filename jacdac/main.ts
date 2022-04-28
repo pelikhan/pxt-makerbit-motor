@@ -57,6 +57,7 @@ namespace servers {
 
     function start() {
         jacdac.productIdentifier = 0x3cadc101
+        jacdac.deviceDescription = "MakerBit Motor"
         jacdac.startSelfServers(() => [
             new MotorServer(MakerBitMotor.A),
             new MotorServer(MakerBitMotor.B),
