@@ -6,8 +6,8 @@
         "radio": "*",
         "microphone": "*",
         "pxt-makerbit-motor": "github:pelikhan/pxt-makerbit-motor",
-        "jacdac": "github:microsoft/pxt-jacdac#v0.10.23",
-        "jacdac-motor": "github:microsoft/pxt-jacdac/motor#v0.10.23"
+        "jacdac": "github:microsoft/pxt-jacdac#v0.10.24",
+        "jacdac-motor": "github:microsoft/pxt-jacdac/motor#v0.10.24"
     },
     "files": [
         "main.ts",
