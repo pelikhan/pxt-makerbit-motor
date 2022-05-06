@@ -34,11 +34,18 @@ namespace servers {
         jacdac.deviceDescription = "MakerBit Motor"
         jacdac.startSelfServers(() => [
             jacdac.createActuatorServer(
-                jacdac.SRV_MOTOR, jacdac.MotorRegPack.Speed, jacdac.MotorRegPack.Enabled,
-                (server) => sync(server, MakerBitMotor.A), { instanceName: "A" }),
+                jacdac.SRV_MOTOR,
+                (server) => sync(server, MakerBitMotor.A), {
+                instanceName: "A",
+                valuePackFormat: jacdac.MotorRegPack.Speed,
+                intensityPackFormat: jacdac.MotorRegPack.Enabled,
+            }),
             jacdac.createActuatorServer(
-                jacdac.SRV_MOTOR, jacdac.MotorRegPack.Speed, jacdac.MotorRegPack.Enabled,
-                (server) => sync(server, MakerBitMotor.B), { instanceName: "B" }),
+                jacdac.SRV_MOTOR,
+                (server) => sync(server, MakerBitMotor.B), {
+                instanceName: "B", valuePackFormat: jacdac.MotorRegPack.Speed,
+                intensityPackFormat: jacdac.MotorRegPack.Enabled,
+            }),
         ])
     }
     start()
