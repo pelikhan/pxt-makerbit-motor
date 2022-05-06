@@ -6,12 +6,12 @@ namespace modules {
      * Maker:bit motor 1
      */
     //% fixedInstance whenUsed block="makerbit motor A"
-    export const makerbitMotorA = new MotorClient("makerbit motor A?dev=self&srvo=0")
+    export const makerbitMotorA = new MotorClient("makerbit motor A?dev=self&srvo=0&name=A")
     /**
      * Maker:bit motor 2
      */
     //% fixedInstance whenUsed block="makerbit motor B"
-    export const makerbitMotorB = new MotorClient("makerbit motor B?dev=self&srvo=1")
+    export const makerbitMotorB = new MotorClient("makerbit motor B?dev=self&srvo=1&name=B")
 }
 
 namespace servers {
