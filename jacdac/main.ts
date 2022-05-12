@@ -15,7 +15,7 @@ namespace modules {
 }
 
 namespace servers {
-    function sync(server: jacdac.ActuatorServer, motor: MakerBitMotor) {
+    function sync(server: jacdac.Server, motor: MakerBitMotor) {
         const speed = server.value
         const enabled = !!server.intensity
         if (speed === 0 || isNaN(speed) || !enabled) {
@@ -46,7 +46,7 @@ namespace servers {
                 instanceName: "B", valuePackFormat: jacdac.MotorRegPack.Speed,
                 intensityPackFormat: jacdac.MotorRegPack.Enabled,
             }),
-        ])
+        ], { simulation: true })
     }
     start()
 }
