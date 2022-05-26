@@ -46,7 +46,7 @@ namespace servers {
                 instanceName: "B", valuePackFormat: jacdac.MotorRegPack.Speed,
                 intensityPackFormat: jacdac.MotorRegPack.Enabled,
             }),
-        ], { simulation: true })
+        ])
     }
     start()
 }
