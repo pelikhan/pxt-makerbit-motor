@@ -1,0 +1,27 @@
+{
+    "name": "makerbit-motor-jacdac",
+    "version": "1.0.21",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*",
+        "pxt-makerbit-motor": "github:pelikhan/pxt-makerbit-motor",
+        "jacdac": "github:microsoft/pxt-jacdac#v0.10.41",
+        "jacdac-motor": "github:microsoft/pxt-jacdac/motor#v0.10.41"
+    },
+    "files": [
+        "main.ts",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "4.1.44",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj"
+}
